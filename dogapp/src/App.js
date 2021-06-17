@@ -20,7 +20,7 @@ function App() {
 
     },NewError => console.log(NewError.message)
     ).then(jsonFile=>{
-        console.log(jsonFile)
+        setUrl(jsonFile.message)
     })
   }
   return (
