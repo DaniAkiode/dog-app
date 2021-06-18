@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Header';
+import Header from './Header';//import header from the header components used to display the title of the web appplication
 function App() {
   const [url, setUrl] = useState(''); //Initalise the url 
   
-  //Use getData Function to fetch the api
+  //Use getData Function when the button is clicked to fetch the api
   function getData(){
     fetch('https://dog.ceo/api/breeds/image/random').then(res=> {
         if(res.ok){
@@ -22,10 +22,13 @@ function App() {
   return (
     <div className="dogMain">
         <Header/> 
-        <img className="dogImg" src={url} />
         <button className="btn btn-success" onClick={getData}>Click for new picture</button>
+        <img className="dogImg" src={url} />
+
     </div>
-  );
+  );/*(The Hardwaron Zone, 2020) */
 }
 
 export default App;
+
+//The Hardwaron Zone, 2020. Random Cat Image Generator with React 😺 | Building a Random Cat Image Generator with React.js. [video] Available at: <https://www.youtube.com/watch?v=ubGJv5NqYb0&list=PLUAP7Jc-AKBH-8ViMJrgzBZK07XTh4q-a&index=10> [Accessed 18 June 2021].
