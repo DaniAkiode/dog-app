@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.dogMain {
+  height:100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dogImg {
+  max-height: 50%;
+  max-width: 50%;
+  margin: 1rem;
+}

@@ -1,15 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
-  /*const [err, setErr] = useState(null);
-  const [Loaded, setLoaded] = useState(false);
-  const [dogs, setDogs] = useState([]);
-  
-  useEffect()
-
-*/
-
   const [url, setUrl] = useState('');
   function getData(){
     fetch('https://dog.ceo/api/breeds/image/random').then(res=> {
@@ -24,8 +16,8 @@ function App() {
     })
   }
   return (
-    <div className="App">
-        <img src={url}/>
+    <div className="dogMain">
+        <img className="dogImg" src={url} />
         <button onClick={getData}>Click for new picture</button>
     </div>
   );
