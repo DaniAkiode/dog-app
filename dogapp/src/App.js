@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header';
 function App() {
   const [url, setUrl] = useState('');
   function getData(){
@@ -17,8 +18,9 @@ function App() {
   }
   return (
     <div className="dogMain">
+        <Header/>
         <img className="dogImg" src={url} />
-        <button onClick={getData}>Click for new picture</button>
+        <button className="btn btn-success" onClick={getData}>Click for new picture</button>
     </div>
   );
 }
